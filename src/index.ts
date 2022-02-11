@@ -1,5 +1,6 @@
 import express from 'express';
 import { AppRouter } from './app-router';
+import './controller';
 
 const app = express();
 

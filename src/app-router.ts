@@ -4,7 +4,7 @@ export class AppRouter {
   private static instance: express.Router;
 
   static getInstance() {
-    if (!AppRouter.instance){
+    if (!AppRouter.instance) {
       AppRouter.instance = express.Router();
     }
 
