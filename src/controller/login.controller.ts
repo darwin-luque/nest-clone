@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { controller } from '../decorators/controller.decorator';
-import { get } from '../decorators/routes.decorator';
+import { get, post } from '../decorators/routes.decorator';
 
 @controller('/login')
 export class LoginController {
@@ -17,5 +17,11 @@ export class LoginController {
       <input type="submit">
     </form>
     `);
+  }
+
+  @post('/sign-in')
+  setUser(req: Request, res: Response) {
+    console.log(req.body);
+    res.status(200).send(`Thank you for your information`);
   }
 }
