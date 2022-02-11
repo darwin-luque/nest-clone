@@ -1,10 +1,5 @@
 import 'reflect-metadata';
-import type { RequestHandler } from 'express';
 import { MetdataKeys, Methods } from './constants';
-
-interface RouteHandlerProperty extends PropertyDescriptor {
-  value?: RequestHandler
-}
 
 function baseRoutes(method: Methods) {
   return function (path?: string) {
